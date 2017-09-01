@@ -10,7 +10,6 @@ import android.os.Handler
 import android.os.Message
 import android.support.annotation.RequiresApi
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.LinearInterpolator
@@ -55,7 +54,7 @@ class PathHeart @JvmOverloads constructor(
                     mAlphapaint=Paint()
                     mAlphapaint.color=Color.RED
                     mPathAnimator.cancel()
-                    invalidate()
+                    handleMessage(msg)
                 }
             }
         }
@@ -157,8 +156,8 @@ class PathHeart @JvmOverloads constructor(
 
     }
 
+    @SuppressLint("DrawAllocation")
     @RequiresApi(Build.VERSION_CODES.KITKAT)
-
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         if(mRandom==0){
