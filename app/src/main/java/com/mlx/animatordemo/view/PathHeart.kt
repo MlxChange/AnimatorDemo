@@ -13,7 +13,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.LinearInterpolator
-import com.example.mlx.myapplication.view.CalculatiooBezier
+import com.example.mlx.myapplication.view.CalculationBezier
 import com.mlx.animatordemo.R
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
@@ -29,6 +29,7 @@ class PathHeart @JvmOverloads constructor(
 ) : BaseView(context, attrs, defStyleAttr) {
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun onClick(p0: View?) {
+        mState=STATE_NONE
         mHandler.sendEmptyMessage(0)
     }
 
@@ -71,7 +72,6 @@ class PathHeart @JvmOverloads constructor(
 
 
     val LEFT=0
-    val RIGHT=1
 
     var mRandom:Int
 
@@ -90,7 +90,7 @@ class PathHeart @JvmOverloads constructor(
 
 
     init {
-        inithandler()
+        initListener()
 
         mRandom=Random().nextInt(1)
 
@@ -106,14 +106,14 @@ class PathHeart @JvmOverloads constructor(
         mScaleAnimator.addListener(mlistener)
         mPathAnimator = ValueAnimator.ofFloat(0f,1f)
         mPathAnimator.interpolator=AccelerateInterpolator()
-        mPathAnimator.duration = 1000
+        mPathAnimator.duration = 2000
         mPathAnimator.addUpdateListener {
             mCurrentValue=it.animatedValue as Float
             invalidate()
         }
         mPathAnimator.addListener(mlistener)
         mAlphaAnimator =ValueAnimator.ofFloat(1f,0f)
-        mAlphaAnimator.duration=500
+        mAlphaAnimator.duration=1000
         mAlphaAnimator.interpolator=LinearInterpolator()
         mAlphaAnimator.addUpdateListener {
             mAlpha= it.animatedValue as Float
@@ -121,7 +121,7 @@ class PathHeart @JvmOverloads constructor(
         mimg=BitmapFactory.decodeResource(context.resources,R.drawable.heart)
     }
 
-    private fun inithandler() {
+    private fun initListener() {
 
 
         mlistener = object : Animator.AnimatorListener {
@@ -179,12 +179,12 @@ class PathHeart @JvmOverloads constructor(
                 val bezier:PointF
                 if(mRandom==LEFT){
                     mpath.quadTo(mFirstCollerPoint.x,mFirstCollerPoint.y, mFirstEndPoint.x, mFirstEndPoint.y)
-                    bezier = PointF().CalculatiooBezier(mCurrentValue, mstartPoint, mFirstCollerPoint, mFirstEndPoint)
+                    bezier = PointF().CalculationBezier(mCurrentValue, mstartPoint, mFirstCollerPoint, mFirstEndPoint)
                 }else{
                     mpath.quadTo(mSecondCollerPoint.x,mSecondCollerPoint.y, mSecondEndPoint.x, mSecondEndPoint.y)
-                    bezier = PointF().CalculatiooBezier(mCurrentValue, mstartPoint, mSecondCollerPoint, mSecondEndPoint)
+                    bezier = PointF().CalculationBezier(mCurrentValue, mstartPoint, mSecondCollerPoint, mSecondEndPoint)
                 }
-                if(mPathAnimator.currentPlayTime>500){
+                if(mPathAnimator.currentPlayTime>1000){
                     if(!mAlphaAnimator.isRunning){
                         mAlphaAnimator.start()
                     }
