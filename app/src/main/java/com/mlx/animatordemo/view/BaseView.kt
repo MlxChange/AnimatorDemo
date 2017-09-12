@@ -15,7 +15,6 @@ abstract class BaseView @JvmOverloads constructor(
 
     var mwidth=0
     var mheight=0
-    lateinit var mScaleAnimator:ValueAnimator
 
     init {
         setOnClickListener(this)

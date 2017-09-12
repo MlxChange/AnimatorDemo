@@ -5,12 +5,22 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:layout_margin="10dp"
+	android:orientation="vertical"
 	tools:context="com.mlx.animatordemo.MainActivity">
 
 	<Button
-		android:text="爱心轨迹动画"
-		android:onClick="heart"
+		style="@style/Widget.AppCompat.Button.Colored"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
+		android:layout_height="wrap_content"
+		android:onClick="heart"
+		android:text="爱心轨迹动画"/>
+
+	<Button
+		style="@style/Widget.AppCompat.Button.Colored"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="dropBall"
+		android:text="下落的小球"/>
 
 </LinearLayout>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.mlx.animatordemo.activity.DropBallActivity
 import com.mlx.animatordemo.activity.PathHeartActivity
 
 class MainActivity : AppCompatActivity() {
@@ -15,5 +16,8 @@ class MainActivity : AppCompatActivity() {
 
     fun heart(v: View){
         startActivity(Intent(this,PathHeartActivity::class.java))
+    }
+    fun dropBall(v: View){
+        startActivity(Intent(this,DropBallActivity::class.java))
     }
 }

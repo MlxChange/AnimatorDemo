@@ -36,6 +36,8 @@ class PathHeart @JvmOverloads constructor(
 
 
 
+    lateinit var mScaleAnimator:ValueAnimator
+
     lateinit var mlistener:Animator.AnimatorListener
     var mHandler = @SuppressLint("HandlerLeak")
     object : Handler() {
