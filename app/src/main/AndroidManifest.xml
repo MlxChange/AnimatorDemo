@@ -20,6 +20,13 @@
 		</activity>
 		<activity android:name=".activity.DropBallActivity">
 		</activity>
+		<activity android:name=".activity.VipActivity">
+		</activity>
+		<activity
+			android:name=".activity.BallLoadingActivity"
+			android:label="@string/title_activity_ball_loading"
+			android:theme="@style/AppTheme.NoActionBar">
+		</activity>
 	</application>
 
 </manifest>

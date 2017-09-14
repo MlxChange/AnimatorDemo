@@ -1,3 +1,4 @@
 <resources>
 	<string name="app_name">AnimatorDemo</string>
+	<string name="title_activity_ball_loading">BallLoadingActivity</string>
 </resources>
