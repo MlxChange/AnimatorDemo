@@ -84,7 +84,7 @@ class BallLoading @JvmOverloads constructor(
                 }
                 STATE_LEFT_TO_RIGHT2->{
                     mState=STATE_NONE
-                    this.sendEmptyMessageDelayed(0,300)
+                    this.sendEmptyMessageDelayed(0,200)
                 }
             }
         }
