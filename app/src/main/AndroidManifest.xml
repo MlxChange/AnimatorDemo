@@ -27,6 +27,8 @@
 			android:label="@string/title_activity_ball_loading"
 			android:theme="@style/AppTheme.NoActionBar">
 		</activity>
+		<activity android:name=".activity.BallLoading">
+		</activity>
 	</application>
 
 </manifest>

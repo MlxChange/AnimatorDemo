@@ -7,7 +7,7 @@
 	android:layout_height="match_parent"
 	tools:context="com.mlx.animatordemo.activity.BallLoadingActivity">
 
-	<com.mlx.animatordemo.view.BallLoading
+	<com.mlx.animatordemo.view.DoubleBallLoading
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"/>
 
