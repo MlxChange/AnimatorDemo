@@ -89,8 +89,6 @@ class PathHeart @JvmOverloads constructor(
     lateinit var mSecondEndPoint:PointF
     lateinit var mSecondCollerPoint:PointF
 
-
-
     init {
         initListener()
 
@@ -131,7 +129,6 @@ class PathHeart @JvmOverloads constructor(
             }
 
             override fun onAnimationEnd(animation: Animator) {
-                // getHandle发消息通知动画状态更
                 mHandler.sendEmptyMessage(0)
             }
 
