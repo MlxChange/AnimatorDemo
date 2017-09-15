@@ -15,15 +15,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
     fun heart(v: View){
         startActivity(Intent(this,PathHeartActivity::class.java))
     }
     fun dropBall(v: View){
         startActivity(Intent(this,DropBallActivity::class.java))
-    }
-    fun Vip(v: View){
-        startActivity(Intent(this,VipActivity::class.java))
     }
     fun ballLoading(v:View){
         startActivity(Intent(this,BallLoadingActivity::class.java))
