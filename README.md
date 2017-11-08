@@ -2,7 +2,7 @@
 <br><br>
 ### 爱心轨迹动画
 <img src="https://github.com/MlxChange/AnimatorDemo/blob/master/screenshot/demo1.gif" width="300px" height="500px"/>
-### 小球降落动画。
+### 小球降落动画
 <img src="https://github.com/MlxChange/AnimatorDemo/blob/master/screenshot/demo2.gif" width="300px" height="500px"/>
-### 双球加载动画。
+### 双球加载动画
 <img src="https://github.com/MlxChange/AnimatorDemo/blob/master/screenshot/demo3.gif" width="300px" height="500px"/>
